@@ -2780,7 +2780,7 @@ function Cl()
         game:GetService("ReplicatedStorage"):WaitForChild("Chest"):WaitForChild("Remotes"):WaitForChild("Functions"):WaitForChild("SkillAction"):InvokeServer(unpack(args))
     end)
 end
-
+--[[
 task.spawn(function()
     while task.wait() do
         pcall(function()
@@ -2837,6 +2837,7 @@ task.spawn(function()
         end)
     end
 end)
+]]
 
 task.spawn(function() 
     while task.wait() do
@@ -2846,9 +2847,9 @@ task.spawn(function()
                 if game:GetService("Players").LocalPlayer.PlayerGui.MainGui.QuestBoard.Visible == false then
                     if (CFrameMon.Position - game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.Position).Magnitude <= 1 then
                         Tween(CFrameMon)
-                        wait(0.175)
+                        wait(0.75)
 						if game:GetService("Workspace").Monster.Mon:FindFirstChild(NameMon) or game:GetService("Workspace").Monster.Boss:FindFirstChild(NameMon) or game:GetService("Players").LocalPlayer.PlayerGui.MainGui.QuestBoard.Visible == false then
-                            wait(0.175)
+                            wait(0.2)
 							local args = {
                                 [1] = "take",
                                 [2] = NameQuest
